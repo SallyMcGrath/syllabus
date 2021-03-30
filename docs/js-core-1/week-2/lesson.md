@@ -40,11 +40,11 @@ let codeYourFutureIsGreat = true;
 let thisIsATerribleClass = false;
 ```
 
-We can use boolean values to make decisions in our code based on certain conditions, as we shall see later on.
+We can use boolean values to make decisions in our code based on certain conditions.
 
 ## Comparison Operators
 
-We can also create an **expression** that evaluates to a `boolean` value - that is, either `true` or `false`. This is possible when we use **comparison operators** such as `===`. This comparison operator will check if two values are the same.
+We can also write an **expression** that evaluates to a `boolean` value - that is, either `true` or `false`. We can do this with **comparison operators** like `===`. This comparison operator checks if two values are the same.
 
 For example,
 
@@ -54,11 +54,11 @@ You can check this by logging the expression `42 === 42` in the Node REPL.
 `42 === 50` will evaluate to `false`.
 You can also check this out by logging the expression `42 === 50` in the Node REPL.
 
-Using a comparison operator will always return a `boolean` value.
+A comparison operator always returns a `boolean` value.
 
 ### `checkIsTrue`
 
-Let's pretend that we have created a function `checkIsTrue` that checks if an **expression** evaluates to `true` or `false`. For the time being, you don't need to know how the function is implemented - you will only need to understand what the function does.
+Let's pretend that we have created a function `checkIsTrue` that checks if an **expression** evaluates to `true` or `false`. For the time being, you don't need to know how the function works - you will only need to understand what the function does.
 
 For example,
 
@@ -73,7 +73,7 @@ checkIsTrue(1 > 2);
 checkIsTrue(2 < 1);
 ```
 
-The `>` symbol in the expressions above is also a **comparison operator**. This operator checks to see if the number on the left is bigger than the number on the right.
+The `>` symbol is also a **comparison operator**. This operator checks to see if the number on the left is bigger than the number on the right.
 
 ```sh
 >   greater than
@@ -104,7 +104,7 @@ If you see these, suggest people change them in pull requests.
 
 ### Exercise ( 15 mins )
 
-1. What do `typeof true` and `typeof false` evaluate to - write some code and log the output to the console to work out the answer.
+1. What do `typeof true` and `typeof false` evaluate to? Write some code and log the output to the console to work out the answer.
 
 2. Check out the code below.
 
@@ -185,7 +185,7 @@ if (isHappy) {
 }
 ```
 
-The code in paratheses - e.g. `(isHappy)` - is the condition. The condition can be _any_ expression. The following are all valid conditions:
+The code in parentheses - e.g. `(isHappy)` - is the condition. The condition can be _any_ expression. The following are all valid conditions:
 
 ```js
 // boolean value
@@ -261,7 +261,13 @@ Create a function that gives you a message depending on your mood! It should:
 
 ## Logical Operators
 
-There are three logical operators in JavaScript: `||` (OR), `&&` (AND), `!` (NOT).
+There are three logical operators in JavaScript:
+
+```sh
+||  or
+&&  and
+!   not
+```
 
 They let you write expressions that evaluate to a boolean value.
 
@@ -299,7 +305,7 @@ Type the following expressions into your node REPL and note the output. Anything
 In pairs, write a function that checks a username is of an acceptable format for a user type. The function must:
 
 - take two parameters: one for the username and one for the user type
-- if the username starts with a capital letter _and_ has length between 5 and 10 characters long, it must return `"Username valid"`; otherwise, it must return `"Username invalid"`
+- if the username starts with a capital letter _and_ has a length of between 5 and 10 characters, it must return `"Username valid"`; otherwise, it must return `"Username invalid"`
 - if the user type is an `admin` _or_ a `manager`, all usernames must return `"Username valid"`
 
 ## Loops
@@ -320,7 +326,7 @@ while (i < 20) {
 
 Notice the line **i++** - this is the same as saying **i = i + 1** It does exactly the same thing but it is just more convenient to write.
 
-It's important that the condition inside the parenthesis becomes false at some point - otherwise, we'll have what's known as an infinite loop!
+It's important that the condition inside the parentheses becomes false at some point - otherwise, we'll have what's known as an infinite loop!
 
 ### Exercise (10 minutes)
 
@@ -332,7 +338,7 @@ Write a function that:
 
 ### for loop
 
-The `for` loop is similar to a while loop, but with a more specialized syntax. Programmers invented the for loop when they realized they were always doing the same three things: creating loop counter variables (like `i` above), incrementing them by some amount, and checking that they're less than a value.
+The `for` loop is similar to a while loop, but with a more specialized syntax. Programmers invented the for loop when they realized they were always doing the same three things: (1) creating loop counter variables (like `i` above), (2) checking that they're less than a value, and (3) incrementing them by some amount.
 
 The `for` loop syntax has special places for each of those three things. Here's the same loop as the first while loop above, as a for loop:
 
@@ -350,7 +356,7 @@ Write a function, similar to the last exercise, that:
 
 - Takes one number `n` as a parameter
 - Adds all numbers from `0` to `n`. For example, if the input is `3`, the output should be `0 + 1 + 2 + 3`
-- You should use an for loop
+- You should use a for loop
 
 ## Arrays
 
@@ -370,7 +376,7 @@ Arrays are data structures that hold a list of values. We call these values the 
 const mentors = ["Daniel", "Irina", "Rares"];
 ```
 
-Arrays can hold any type of value (although almost always you only have one data type per array).
+Arrays can hold any type of value (but you almost always only have one data type per array).
 
 ```js
 const testScores = [16, 49, 85];
@@ -380,7 +386,7 @@ const greetings = ["Hello, how are you?", "Hi! Nice to meet you!"];
 
 You can access elements in an array using the **index** of an element with **bracket notation**
 
-**🔔 Remember:** All arrays start at position 0! To access the first element in an array, you need to access index `0`, the second element at `1`, the fifth at `4` and so forth. This is called zero-based indexed arrays. There are some [very intense reasons for this](http://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html), but most people just accept it and move on.
+**🔔 Remember this:** All arrays start at position 0! To access the first element in an array, you need to access index `0`, the second element at `1`, the fifth at `4` and so forth. This is called a zero-based indexed array. There are some [very intense reasons for this](http://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html), but most people just accept it and move on.
 
 ```js
 const students = ["Ahmed", "Maria", "Atanas", "Nahidul", "Jack"];
@@ -418,7 +424,7 @@ Then, replace 'apple' with 'raspberry', and replace 'fig' with 'pineapple'.
 
 ### Exercise (5 mins)
 
-Complete this function so that, if the second element in the array contains the name "Amy", it returns `"Second element matched!"`
+Complete this function so that if the second element in the array contains the name "Amy", it returns `"Second element matched!"`
 
 ```js
 function secondMatchesAmy(array) {
@@ -505,7 +511,7 @@ for (let i = 0; i < daysOfWeek.length; i++) {
 
 ### Playing computer II
 
-1. Working in pairs or groups, you have to predict the output of this program without executing it.
+1. Working in pairs or groups, predict the output of this program without executing it.
 2. What is printed to the console?
 3. Have you learned anything new during this exercise?
 
@@ -534,7 +540,7 @@ for (let i = 0; i < 5; ++i) {
 
 ### Playing computer III
 
-1. Again, working in pairs or groups, you have to predict the output of this program without executing it.
+1. Again, working in pairs or groups, predict the output of this program without executing it.
 2. What is printed to the console?
 3. What was difficult about this exercise?
 4. Have you learned anything new?
