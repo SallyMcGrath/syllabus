@@ -63,9 +63,9 @@ _(This exercise will help you understand how to run a basic JS script and explor
 
 1. Create your first `js1-week1.js` script
 2. Type `console.log("Hello World!")`
-3. There are 2 ways you can run this script - one way is by pressing F5 in your VS Code application. Can you find out what the second way is? Pair up and use a search engine to find out! Choose your favourite method and use that from now on.
+3. There are two ways you can run this script. One way is by pressing F5 in your VS Code application. Can you find out what the second way is? Pair up and use a search engine to find out! Choose your favourite method and use that from now on.
 
-**BONUS:** there is a third way of running JS code (notice how I haven't said scipt) - do you know what that is?
+**BONUS:** there is a third way of running JS code (notice how I haven't said script) - do you know what that is?
 
 ### Exercise (5 minutes)
 
@@ -85,9 +85,9 @@ Hola, mundo! // Spanish
 
 When you write code, you'll want to create shortcuts to data values so you don't have to write out the same value every time.
 
-We can use a _variable_ to create a reference to a value. Variables can be thought of as named containers. You can place data into these containers and then refer to the data simply by naming the container.
+We can use a _variable_ to create a reference to a value. Think of variables as named containers. You can place data into these containers and then refer to the data by naming the container.
 
-Before you use a variable in a JavaScript program, you must declare it. Variables are declared with _let_ and _const_ keywords as follows.
+Before you use a variable in a JavaScript program, you must declare it. Variables are declared with _let_ and _const_ keywords:
 
 ```js
 let greeting = "Hello world";
@@ -118,7 +118,7 @@ Computers recognise strings as a sequence of characters but to humans, strings a
 const message = "This is a string";
 ```
 
-Notice that strings are always wrapped **inside of quote marks**. We do this so that the computer knows when the string starts and ends.
+Notice that strings are always wrapped **inside quote marks**. We do this so that the computer knows when the string starts and ends.
 
 You can check that the data is a string by using the `typeof` operator:
 
@@ -167,7 +167,7 @@ console.log(greeting); // Logs "Hello, my name is Daniel"
 
 ### Exercise (5 mins)
 
-1. Write a program that logs a message with a greeting and your name using the two concatenation methods we used
+1. Write a program that logs a message with a greeting and your name using the two concatenation methods we used.
 
 ## Numbers
 
@@ -205,7 +205,7 @@ const roughAge = Math.round(preciseAge); // 31
 
 ### Exercise (15 mins)
 
-1. Create two variables `numberOfStudents` and `numberOfMentors`
+1. Create two variables: `numberOfStudents` and `numberOfMentors`
 2. Log a message that displays the total number of students and mentors
 
 #### Expected result
@@ -216,9 +216,7 @@ Number of mentors: 8
 Total number of students and mentors: 23
 ```
 
-3. Using the variables you created in the previous steps, calculate the percentage of mentors and students in the group (percentages must be rounded to the nearest integer)
-
-You should then log this number to the console.
+3. Using the variables you created in the previous steps, calculate the percentage of mentors and students in the group. Round the percentages to the nearest integer. Log this number to the console.
 
 #### Expected result
 
@@ -241,7 +239,7 @@ In JavaScript, sections of code can be called **expressions** and **statements**
 
 ### Expression
 
-Any unit of code that can be evaluated to a value is known as an **expression**.
+A unit of code that can resolves to a value is called an **expression**.
 
 We say that an expression _evaluates to_ a value.
 We use expressions all the time in lot of different places:
@@ -273,19 +271,26 @@ let worldGreeting = "Hello" + "World"; // assign the value "HelloWorld" (the val
 
 You can run `node` by itself, which will open a _node console_, also called a [Read–Eval–Print Loop (REPL)](https://www.tutorialspoint.com/nodejs/nodejs_repl_terminal.htm).
 
-This console allows you to enter code in the console line by line and is a great way of testing bits of code before writing it in a script. Each time you press enter, it will print out what the expression you typed evaluates to.
+You can enter code in the console line by line. It's a great way of testing bits of code before writing it in a script. Each time you press enter, it will evaluate the expression and print the value.
 
-In your terminal, run the command `node` and then enter a line of code from the code below and then run enter. Do this for each line of code in the list.
-Think about the following questions each time:
+In your terminal:
+
+1. run the command `node`
+2. enter a line from the code below
+3. then run enter.
+
+Do this for each line of code in the list. Think about the following questions each time:
 
 What is the output in the terminal each time ?
 Is there anything you didn't expect ?
 
+_Remember: it can only be an expression if you can place it on the right hand side of an assignment._
+
+| Expression | Not an expression |
+| ---------- | ----------------- |
+| `2 + 2`    | `const`           |
+
 Can you work out which of the lines of code below are **expressions** and which are not ?
-
-- Add some example here
-
-_Remember it can only be an expression if you can place it on the right hand side of an assignment._
 
 ```js
 1 + 2;
@@ -314,20 +319,19 @@ hoursInADay * 7;
 
 ### Statement
 
-A statement is some code that typically carries out an instruction. You have encountered statements already:
+A statement typically carries out an instruction. You have encountered statements already:
 
 ```js
 const greeting = "Hello Code Your Future!";
 ```
 
-The above piece of code is a **variable declaration**, which is also a statement.
-This statement is an instruction to store the value `"Hello Code Your Future!"` in the variable `greeting`.
+This statement is an instruction to store the value `"Hello Code Your Future!"` in the variable `greeting`. We call that a **variable declaration**, which is also a statement.
 
 There are other different types of statements that we will learn about in the coming weeks, such as an `if` statement.
 
 ## Functions
 
-Functions are blocks of code that can do a task as many times as you ask them to. They take an input and return an output.
+Functions are blocks of code that can do a task as many times as you ask. Functions take an input and return an output.
 
 Here's a function that doubles a number:
 
@@ -345,14 +349,22 @@ const result = double(2);
 console.log(result); // 4
 ```
 
-The function `double` is being called by placing parathenses after the name of the function like this `double()`
+To call the function `double`, we place parentheses after the function name, like this `double()`
 
 🔑
-The input given to a function is called a **argument**
+The input given to a function is called an **argument**
 
-🔑 A **parameter** is a variable that is used to refer to an **argument**
+🔑 A **parameter** is a variable that refers to an **argument**
 
-In the example above, we're saying that inside the function `double`, there is a variable called number, but we don't know what the value of the variable is until someone calls the function, at which point they will give a value for that variable.
+Let's look again.
+
+```js
+function double(number) {
+  return number * 2;
+}
+```
+
+We're saying that inside the function `double`, there is a variable called number. We don't know what the _value_ of the variable is until someone _calls_ the function. In other words, we give a value to that variable when we call the function.
 
 A function can have one or more **parameters**, check out the example below:
 
@@ -364,11 +376,11 @@ function add(a, b) {
 
 In the function `add`, the parameters are `a` and `b`.
 
-If we call the function like this `add(10, 32)` then we're passing 2 arguments (or inputs) into the function : `10` and `32`. We can use any expression as an argument.
+When we call the function like this `add(10, 32)` we pass two arguments (or inputs) into the function : `10` and `32`. We can use any expression as an argument.
 
 When you write a function (sometimes called _declaring a function_) you can define the parameters with any valid variable name.
 
-The function below does exactly the same thing as the one above:
+The function below does the same thing as the one above. To the computer, the variable is just a sequence of characters and can be any sequence. We use English so humans can follow the code.
 
 ```js
 function add(num1, num2) {
@@ -420,7 +432,7 @@ Someone's been generous and decided to increase your `pocketMoney` by 50% 😎
 
 Using the functions `increaseByHalf` and `formatPenceToPounds` only, find the new amount of pocket money as a string in pounds with a `£` symbol at the front.
 
-Then use `console.log` the output in order to check your function.
+In your terminal, `console.log` the output to check your function.
 
 ---
 
@@ -480,7 +492,7 @@ A critical part of being developer is reading other people's code and giving goo
 
 Let's spend the next five minutes reviewing CodeYourFuture's Style Guide.
 
-This style guide is how we expect you to write code whilst you're at CodeYourFuture - most companies have one and it's really important you stick to it to make sure we all write code that other people can understand.
+This style guide is how we expect you to write code at CodeYourFuture. Most companies have one and it's really important you stick to it to make sure we all write code that other people can understand.
 
 [https://syllabus.codeyourfuture.io/guides/code-style-guide](https://syllabus.codeyourfuture.io/guides/code-style-guide)
 
@@ -503,8 +515,8 @@ Using what you've just read in the Style Guide.
 
 ## Glossary
 
-- Console: a place on your computer to run scripts or commands from
-- Command: something that you type on your computer which performs an operation that your computer does
+- Console: a place on your computer to run scripts or commands
+- Command: an instruction you type that the computer carries out
 - Directory: another word for "folder" on your computer
 - Parameter: a placeholder for values you can pass into functions
 - Primitive type: a built-in type in JavaScript (e.g. strings and numbers are primitive types in JavaScript)
