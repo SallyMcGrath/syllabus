@@ -18,7 +18,7 @@ import Feedback from "@theme/Feedback";
 
 ## Learning Objectives
 
-By the end of this class, you should be able to answer these questions:
+By the end of this class, you should be able to:
 
 - Describe what an array method is and use them to manipulate an array
 - Write code that chains array methods together
@@ -61,9 +61,9 @@ Water
 3
 ```
 
-Did you notice how we use `[0]` to get the first value? In programming we count starting at zero.
+Did you notice how we use `[0]` to get the first value? Last week, we learned that all arrays start at position 0. This is because in programming we usually count starting at zero.
 
-> The number inside of the brackets is called an **index**. Index just means the position of the item within the array.
+> The number inside the brackets is called an **index**. Index means the position of the item within the array.
 
 You can also **set** a value using bracket notation and an assignment operator (`=`).
 
@@ -82,7 +82,7 @@ scores[3] = 51; // Add a new score
 - Add someone else to the end of the list
 
 ## Working with arrays
-When working with lists it is often useful to manipulate, enhance, or search the information in that list.
+When working with lists you often need to manipulate, enhance, or search the information in that list.
 
 Some examples of things you might want to do with a list of data:
 
@@ -98,7 +98,7 @@ Some examples of things you might want to do with a list of data:
 
 ### Exercise - extra credit (10 minutes)
 
-Working as a group - use the [MDN documentation on arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods) to see if you can find what methods might be useful to achieving the above examples.
+Working as a group, consider each task on the list above. Look through the [MDN documentation on arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods) and find a **method** to complete each task on the list.
 
 ## Array methods
 
@@ -114,7 +114,7 @@ daniel
 
 Arrays also have several methods that you can use.
 
-### `.sort()`
+### `.sort()`
 
 _An array method that sorts the values in an array into ascending alphabetical or numerical order._
 
@@ -251,11 +251,11 @@ The `map()` method runs the function we provided (`double`) on each item in the 
 
 ### Callback functions
 
-A function that we provide to a method is commonly called a _callback_ function. The term highlights that although we _provide_ the `double` function, the `.map()` method _calls_ it. (Notice how we never write `double()` to call the function).
+A _callback_ function is a function we provide to a method. The term "callback" highlights that although we _provide_ the `double` function, the `.map()` method _calls_ it. (Notice how we never write `double()` to call the function).
 
 We'll see callback functions used a lot more in the coming weeks.
 
-Often, when a function is only needed for a map operation, developers will declare the callback function inside of the method call. Let's try copying and pasting the function declaration inside of the `.map()` method call.
+Often, when a function is only needed for a map operation, developers will declare the callback function inside the method call. Let's try copying and pasting the function declaration inside the `.map()` method call.
 
 ```js
 const numbers = [1, 2, 3];
@@ -273,7 +273,7 @@ const numbersDoubled = numbers.map(function (number) {
 });
 ```
 
-We can make this code even shorter still. In the latest versions of JavaScript a way of declaring functions was introduced called _arrow functions_.
+We can make this code even shorter still. In the latest versions of JavaScript, we now have the _arrow function_.
 
 ```js
 const numbers = [1, 2, 3];
@@ -282,7 +282,7 @@ const numbersDoubled = numbers.map((number) => {
 });
 ```
 
-The arrow function syntax lets you declare a function without the `function` keyword. (There are some other subtle differences between arrow functions and regular functions that you will learn about at a much later stage).
+With this `=>` syntax you can declare a function without the `function` keyword. (There are some other subtle differences between arrow functions and regular functions that you will learn about at a much later stage).
 
 There is one last thing you can do to make your code shorter. If you remove the braces (`{}`) from an arrow function, the body of the function will be returned without needing to write the `return` keyword.
 
